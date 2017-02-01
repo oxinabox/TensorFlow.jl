@@ -34,7 +34,7 @@ function build_output(tensors::Vector, values, pos=Ref(1))
     [build_output(subtensor, values, pos) for subtensor in tensors]
 end
 
-function get_tensors(tensor::Union{Tensor, Number})
+function get_tensors(tensor::Union{AbstractTensor, Number})
     return [tensor]
 end
 
