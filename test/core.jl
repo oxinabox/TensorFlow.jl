@@ -18,3 +18,10 @@ w_val = run(sess, W)
 @test size(w_val)==(10,20)
 y_val = run(sess, Y, Dict(X=>x_val))
 @test y_val ≈ x_val * w_val
+
+# make sure can get with feed 
+w_val3  = run(sess, [W], Dict(X=>x_val))
+# make sure can get both at once
+y_val2, w_val2  = run(sess, [Y, W], Dict(X=>x_val))
+@test y_val2 == y_val
+@test w_val2 == w_val
