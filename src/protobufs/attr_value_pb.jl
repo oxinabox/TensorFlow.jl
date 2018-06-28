@@ -35,7 +35,7 @@ type AttrValue
 end #type AttrValue
 const __fnum_AttrValue = Int[2,3,4,5,6,7,8,1,9]
 const __oneofs_AttrValue = Int[1,1,1,1,1,1,1,1,1]
-const __oneof_names_AttrValue = [@compat(Symbol("value"))]
+const __oneof_names_AttrValue = [Symbol("value")]
 meta(t::Type{AttrValue}) = meta(t, ProtoBuf.DEF_REQ, __fnum_AttrValue, ProtoBuf.DEF_VAL, true, ProtoBuf.DEF_PACK, ProtoBuf.DEF_WTYPES, __oneofs_AttrValue, __oneof_names_AttrValue)
 hash(v::AttrValue) = ProtoBuf.protohash(v)
 isequal(v1::AttrValue, v2::AttrValue) = ProtoBuf.protoisequal(v1, v2)

@@ -64,7 +64,7 @@ type Event
     Event(; kwargs...) = (o=new(); fillunset(o); isempty(kwargs) || ProtoBuf._protobuild(o, kwargs); o)
 end #type Event
 const __oneofs_Event = Int[0,0,1,1,1,1,1,1]
-const __oneof_names_Event = [@compat(Symbol("what"))]
+const __oneof_names_Event = [Symbol("what")]
 meta(t::Type{Event}) = meta(t, ProtoBuf.DEF_REQ, ProtoBuf.DEF_FNUM, ProtoBuf.DEF_VAL, true, ProtoBuf.DEF_PACK, ProtoBuf.DEF_WTYPES, __oneofs_Event, __oneof_names_Event)
 hash(v::Event) = ProtoBuf.protohash(v)
 isequal(v1::Event, v2::Event) = ProtoBuf.protoisequal(v1, v2)
