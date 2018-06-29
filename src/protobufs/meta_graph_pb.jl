@@ -58,7 +58,7 @@ type CollectionDef
     CollectionDef(; kwargs...) = (o=new(); fillunset(o); isempty(kwargs) || ProtoBuf._protobuild(o, kwargs); o)
 end #type CollectionDef
 const __oneofs_CollectionDef = Int[1,1,1,1,1]
-const __oneof_names_CollectionDef = [@compat(Symbol("kind"))]
+const __oneof_names_CollectionDef = [Symbol("kind")]
 meta(t::Type{CollectionDef}) = meta(t, ProtoBuf.DEF_REQ, ProtoBuf.DEF_FNUM, ProtoBuf.DEF_VAL, true, ProtoBuf.DEF_PACK, ProtoBuf.DEF_WTYPES, __oneofs_CollectionDef, __oneof_names_CollectionDef)
 hash(v::CollectionDef) = ProtoBuf.protohash(v)
 isequal(v1::CollectionDef, v2::CollectionDef) = ProtoBuf.protoisequal(v1, v2)

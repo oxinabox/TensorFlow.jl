@@ -56,7 +56,7 @@ type Summary_Value
 end #type Summary_Value
 const __fnum_Summary_Value = Int[7,1,2,3,4,5,6,8]
 const __oneofs_Summary_Value = Int[0,0,1,1,1,1,1,1]
-const __oneof_names_Summary_Value = [@compat(Symbol("value"))]
+const __oneof_names_Summary_Value = [Symbol("value")]
 meta(t::Type{Summary_Value}) = meta(t, ProtoBuf.DEF_REQ, __fnum_Summary_Value, ProtoBuf.DEF_VAL, true, ProtoBuf.DEF_PACK, ProtoBuf.DEF_WTYPES, __oneofs_Summary_Value, __oneof_names_Summary_Value)
 hash(v::Summary_Value) = ProtoBuf.protohash(v)
 isequal(v1::Summary_Value, v2::Summary_Value) = ProtoBuf.protoisequal(v1, v2)
